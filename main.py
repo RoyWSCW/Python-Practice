@@ -2,6 +2,7 @@
 #print(random.randint(0, 11))
 
 score = 0
+QUESTION_FORMAT = "{}\nA.{} B.{} C.{} D.{}"
 
 # Ask the user their name and save it
 name = input("Hello, what's your name?")
@@ -13,7 +14,7 @@ print("Welcome to the science quiz",name)
 answer = input("Q.1 What is Carbon's atomic number?")
 
 # Check the user’s answer and give feedback
-if answer == "6":
+if answer == "6" or answer == " 6":
     print("Correct!")
     score += 1
 elif answer == "":
@@ -25,10 +26,10 @@ else:
 answer = input("Q.2 True or False the element Argon is a noble gas")
 answer = answer.lower()
 
-if answer == "true":
+if answer == "true" or answer == " true" or answer == "t" or answer == " t":
     print("Correct!")
     score += 1 
-elif answer == "false":
+elif answer == "false" or answer == " false" or answer == "f" or answer == " f":
     print("Incorrect!")
 elif answer == "":
     print("Not sure?")
@@ -36,7 +37,7 @@ elif answer == "":
 answer = input("Q.3 What is the name of the 12th element on the periodic table?")
 answer = answer.lower()
 
-if answer == "magnesium":
+if answer == "magnesium" or answer == " magnesium":
     print("Correct!")
     score += 1
 elif answer == "":
@@ -48,7 +49,7 @@ else:
 answer = input("Q.4 What element does the symbol Au on the periodic table represent?")
 answer = answer.lower()
 
-if answer == "gold":
+if answer == "gold" or answer == " gold":
     print("Correct!")
     score += 1
 elif answer == "":
@@ -60,10 +61,10 @@ else:
 answer = input("Q.5 True or False the letter Q is not used in the symbol of any element on the periodic table")
 answer = answer.lower()
 
-if answer == "true":
+if answer == "true" or answer == " true" or answer == "t" or answer == " t":
     print("Correct!")
     score += 1 
-elif answer == "false":
+elif answer == "false" or answer == " false" or answer == "f" or answer == " f":
     print("Incorrect!")
 elif answer == "":
     print("Not sure?")
@@ -73,15 +74,76 @@ a = "Nitrogen"
 b = "Nickel"
 c = "Nihonium"
 d = "Niobium"
-answer = input("{}\nA.{} B.{} C.{} D.{}".format(question, a, b, c, d)).lower()
+answer = input(QUESTION_FORMAT.format(question, a, b, c, d)).lower()
 
-if answer == b or answer == "b":
+if answer == b or answer == "b" or answer == " nickel" or answer == "nickel":
     print("Correct!")
     score += 1
 elif answer == "":
     print("Not sure?")
-elif answer != a and answer != "a" and answer != b and answer != "b" and answer != c and answer != "c" and answer != d and answer != "d"
+elif answer != a and answer != "a" and answer != b and answer != "b" and answer != c and answer != "c" and answer != d and answer != "d":
     print("That wasn't an option")
+else:
+    print("Wrong!")
+    print("The answer is Nickel")
+
+answer = input("Q.7 What is sodium's symbol on the periodic table?")
+answer = answer.lower()
+
+if answer == "na" or answer == " na":
+    print("Correct!")
+    score += 1
+elif answer == "":
+    print("Not sure?")
+else:
+    print("Incorrect!")
+
+question = "Q.8 How many elements are on the periodic table?"
+a = "117"
+b = "118"
+c = "119"
+d = "120"
+answer = input(QUESTION_FORMAT.format(question, a, b, c, d)).lower()
+
+if answer == b or answer == "b" or answer == " 118" or answer == "118":
+    print("Correct!")
+    score += 1
+elif answer == "":
+    print("Not sure?")
+elif answer != a and answer != "a" and answer != b and answer != "b" and answer != c and answer != "c" and answer != d and answer != "d":
+    print("That wasn't an option")
+else:
+    print("Wrong!")
+    print("The answer is 118")
+
+answer = input("Q.9 True or False the letter J is not used in the symbol of any element on the periodic table")
+answer = answer.lower()
+
+if answer == "true" or answer == " true" or answer == "t" or answer == " t":
+    print("Correct!")
+    score += 1 
+elif answer == "false" or answer == " false" or answer == "f" or answer == " f":
+    print("Incorrect!")
+elif answer == "":
+    print("Not sure?")
+
+question = "Q.10 Is the person who made this quiz a better coder than you, for this specific question please only answer in one letter"
+a = "yes"
+b = "no, just kidding of course yes"
+c = "yes because im a bad coder"
+d = "Opposite of no (yes)"
+answer = input(QUESTION_FORMAT.format(question, a, b, c, d)).lower()
+
+if answer == a and answer == "a" and answer == b and answer == "b" and answer == c and answer == "c" and answer == d and answer == "d":
+    print("Correct!")
+    score += 1
+elif answer == "":
+    print("Not sure?")
+elif answer != a and answer != "a" and answer != b and answer != "b" and answer != c and answer != "c" and answer != d and answer != "d":
+    print("That wasn't an option")
+else:
+    print("Wrong!")
+    print("The answer is 118")
 
 # End the quiz
 if score < 9:
