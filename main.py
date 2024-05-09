@@ -97,6 +97,7 @@ elif answer == "":
     print("Not sure?")
 else:
     print("Incorrect!")
+    print("The answer is Na")
 
 question = "Q.8 How many elements are on the periodic table?"
 a = "117"
@@ -143,10 +144,10 @@ elif answer != a and answer != "a" and answer != b and answer != "b" and answer 
     print("That wasn't an option")
 else:
     print("Wrong!")
-    print("The answer is 118")
+    print("The answer is any of the above and you know it")
 
 # End the quiz
 if score < 9:
-    print("It's now the end of the quiz {}, you got {} out of 10 questions correct, thanks for playing.".format(name, score))
+    print("It's now the end of the quiz {}, \nyou got {} out of 10 questions correct, thanks for playing.".format(name, score))
 else:
-    print("It's now the end of the quiz {}, congratulations on getting all the questions correct, you did great, thanks for playing.".format(name))
+    print("It's now the end of the quiz {}, \ncongratulations on getting all the questions correct, you did great, thanks for playing.".format(name))
