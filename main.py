@@ -69,7 +69,7 @@ elif answer == "false" or answer == " false" or answer == "f" or answer == " f":
 elif answer == "":
     print("Not sure?")
 
-question = "Q.6 What element does the symbol Ni represent?\n"
+question = "Q.6 What element does the symbol Ni represent?"
 a = "Nitrogen"
 b = "Nickel"
 c = "Nihonium"
@@ -99,7 +99,7 @@ else:
     print("Incorrect!")
     print("The answer is Na")
 
-question = "Q.8 How many elements are on the periodic table?\n"
+question = "Q.8 How many elements are on the periodic table?"
 a = "117"
 b = "118"
 c = "119"
@@ -128,7 +128,7 @@ elif answer == "false" or answer == " false" or answer == "f" or answer == " f":
 elif answer == "":
     print("Not sure?")
 
-question = "Q.10 Is the person who made this quiz a better coder than you, for this specific question please only answer in one letter\n"
+question = "Q.10 Is the person who made this quiz a better coder than you, for this specific question please only answer in one letter"
 a = "yes"
 b = "no, just kidding of course yes"
 c = "yes because im a bad coder"
