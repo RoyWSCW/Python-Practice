@@ -1,6 +1,7 @@
 #import random
 #print(random.randint(0, 11))
 
+play = "yes"
 score = 0
 QUESTION_FORMAT = "{}\nA.{} B.{} C.{} D.{}\n"
 
@@ -12,6 +13,9 @@ print("Welcome to the science quiz",name)
 
 # Ask the user a question
 answer = input("Q.1 What is Carbon's atomic number?\n")
+
+tries = input("How many attempts do you want at each question? 1-4")
+tries = tries - 1
 
 # Check the user’s answer and give feedback
 if answer == "6" or answer == " 6":
