@@ -5,7 +5,7 @@ score = 0
 QUESTION_FORMAT = "{}\nA.{} B.{} C.{} D.{}"
 
 # Ask the user their name and save it
-name = input("Hello, what's your name?")
+name = input("Hello, what's your name?\n")
 
 # Greet the user and introduce the quiz
 print("Welcome to the science quiz",name)
