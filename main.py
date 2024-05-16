@@ -37,7 +37,7 @@ while play == "yes":
             print("Not sure?")
         else:
             print("Wrong!")
-            print("The answer is 6")
+        print("The answer is 6")
         question_attempts -= 1
     question_attempts = tries
     while question_attempts > 0:
