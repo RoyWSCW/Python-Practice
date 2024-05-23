@@ -1,10 +1,25 @@
 #import random
 #print(random.randint(0, 11))
 import sys
+import random
+
+QUESTIONS = ["Q.1 What is Carbon's atomic number?\n", 
+             "Q.2 True or False the element Argon is a noble gas\n", 
+             "Q.3 What is the name of the 12th element on the periodic table?\n", 
+             "Q.4 What element does the symbol Au on the periodic table represent?\n", 
+             "Q.5 True or False the letter Q is not used in the symbol of any element on the periodic table\n", 
+             "Q.6 What element does the symbol Ni represent?", 
+             "Q.7 What is sodium's symbol on the periodic table?\n", 
+             "Q.8 How many elements are on the periodic table?", 
+             "Q.9 True or False the letter J is not used in the symbol of any element on the periodic table\n", 
+             "Q.10 Is the person who made this quiz a better coder than you, for this specific question please only answer in one letter"]
+OPTIONS = [[]]
 
 play = "yes"
 score = 0
 QUESTION_FORMAT = "{}\nA.{} B.{} C.{} D.{}\n"
+GOOD_COMMENTS = ["Way to go!", "Keep it up!", "Fantastic!"]
+BAD_COMMENTS = ["Keep trying", "Maybe next time", "Don't give up"]
 check = "play" == "PLAY".lower()
 print(check)
 
@@ -32,13 +47,15 @@ while play == "yes":
         if answer == "6" or answer == " 6":
             print("Correct!")
             score += 1
+            print(random.choice(GOOD_COMMENTS))
             break
         elif answer == "":
             print("Not sure?")
         else:
             print("Wrong!")
-        print("The answer is 6")
+            print(random.choice(BAD_COMMENTS))
         question_attempts -= 1
+    print("The answer is 6")
     question_attempts = tries
     while question_attempts > 0:
         answer = input("Q.2 True or False the element Argon is a noble gas\n")
