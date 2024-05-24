@@ -13,7 +13,18 @@ QUESTIONS = ["Q.1 What is Carbon's atomic number?\n",
              "Q.8 How many elements are on the periodic table?", 
              "Q.9 True or False the letter J is not used in the symbol of any element on the periodic table\n", 
              "Q.10 Is the person who made this quiz a better coder than you, for this specific question please only answer in one letter"]
-OPTIONS = [[]]
+OPTIONS = [["4", "5", "6", "7"],
+           ["True", "False"],
+           ["Sodium", "Magnesium", "Aluminium", "Silicon"]
+           [""]
+           ["True", "False"]
+           ["Nitrogen", "Nickel", "Nihonium", "Niobium"]
+           []
+           ["117", "118", "119", "120"]
+           ["True", "False"]
+           ["yes", "no, just kidding of course" "yes because im a bad coder", "Opposite of no (yes)"]]
+SHORT_OPTIONS = ["a", "b", "c", "d"]
+ANSWERS = [2,0,1]
 
 play = "yes"
 score = 0
