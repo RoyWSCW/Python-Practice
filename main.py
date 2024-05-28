@@ -15,16 +15,36 @@ QUESTIONS = ["Q.1 What is Carbon's atomic number?\n",
              "Q.10 Is the person who made this quiz a better coder than you, for this specific question please only answer in one letter"]
 OPTIONS = [["4", "5", "6", "7"],
            ["True", "False"],
-           ["Sodium", "Magnesium", "Aluminium", "Silicon"]
-           [""]
-           ["True", "False"]
-           ["Nitrogen", "Nickel", "Nihonium", "Niobium"]
-           []
-           ["117", "118", "119", "120"]
-           ["True", "False"]
+           ["Sodium", "Magnesium", "Aluminium", "Silicon"],
+           ["Aluminium", "Augustine", "Gold", "Argon"],
+           ["True", "False"],
+           ["Nitrogen", "Nickel", "Nihonium", "Niobium"],
+           ["S", "So", "N", "Na"],
+           ["117", "118", "119", "120"],
+           ["True", "False"],
            ["yes", "no, just kidding of course" "yes because im a bad coder", "Opposite of no (yes)"]]
 SHORT_OPTIONS = ["a", "b", "c", "d"]
-ANSWERS = [2,0,1]
+ANSWERS = [2,0,1,2,0,1,3,1,0,"ALL"]
+
+while True:
+    for question_number in range(len(QUESTIONS)):
+        question = QUESTIONS[question_number]
+        answer = ANSWERS[question_number]
+        options = OPTIONS[question_number]
+        print(question)
+        for option in range(len(options)):
+            print("{}. {}".format(option+1, options[option]))
+        user_answer = input("> ")
+        if user_answer == str(answer+1) or answer == "ALL":
+            print("You are correct!")
+        elif user_answer == "":
+            print("You skipped it!")
+        elif user_answer == "exit":
+            break
+        else:
+            print("You are incorrect")
+        print("The right answer was {}".format(answer+1))
+    
 
 play = "yes"
 score = 0
@@ -45,7 +65,7 @@ while True:
         tries = int(tries)
         break
     except KeyboardInterrupt:
-        sys.exit(1)
+        sys.exit(1) 
     except:
         print("That's not a number")
 
