@@ -38,6 +38,14 @@ else:
 
 print("Game over. Your final score was {}".format(score))
 
+if inList(answer, DICTATORS_WITH_THE_HIGHEST_KILL_COUNT_ANSWERS):
+    if inList(answer, guesses):
+        print("You've guessed that already")
+    else:
+        print("Correct")
+        score += 1
+        guesses.append(answer)
+        print("You have guessed {}. Your score is {}. You have {} chances remaining".format)
 
 # --------- MAIN CODE ----------
 intro()
